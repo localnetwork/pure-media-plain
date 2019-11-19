@@ -1,0 +1,97 @@
+/**
+ ** Developer: https://github.com/localnetwork/pure-media
+ **/
+figure {
+  display: block;
+  margin: 0;
+}
+
+.graf-figure {
+  position: relative;
+  clear: both;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.aspectRatioPlaceholder {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.aspectRatioPlaceholder-fill {
+  display: block;
+}
+
+.progressiveMedia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.progressiveMedia-thumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+}
+
+.progressiveMedia-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 100;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.progressiveMedia {
+  overflow: hidden;
+}
+.progressiveMedia .progressiveMedia-canvas {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.progressiveMedia.is-canvasLoaded .progressiveMedia-canvas {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s linear 0s, opacity 0.4s 0s;
+  -o-transition: visibility 0s linear 0s, opacity 0.4s 0s;
+  transition: visibility 0s linear 0s, opacity 0.4s 0s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.progressiveMedia .progressiveMedia-image {
+  opacity: 0;
+  backface-visibility: hidden;
+}
+.progressiveMedia.lazyloaded .progressiveMedia-canvas {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.progressiveMedia.lazyloaded .progressiveMedia-image.lazyloaded {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s linear 0s, opacity 1s 0s;
+  -o-transition: visibility 0s linear 0s, opacity 1s 0s;
+  transition: visibility 0s linear 0s, opacity 1s 0s;
+}
+
+/*# sourceMappingURL=pure-media.css.map */

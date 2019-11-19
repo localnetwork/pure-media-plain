@@ -1,0 +1,41 @@
+.progressiveMedia {
+  overflow: hidden; 
+  .progressiveMedia-canvas {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;backface-visibility: hidden; 
+  }
+  &.is-canvasLoaded {
+    .progressiveMedia-canvas {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition: visibility 0s linear 0s,opacity .4s 0s;
+      -o-transition: visibility 0s linear 0s,opacity .4s 0s;
+      transition: visibility 0s linear 0s,opacity .4s 0s;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+              transform: scale(1.1);
+      // -webkit-filter: blur(30px);
+      //         filter: blur(30px); 
+    } 
+  } 
+ 
+  .progressiveMedia-image {
+    // visibility: hidden;
+    opacity: 0;
+    backface-visibility: hidden;
+  }
+  &.lazyloaded {
+    .progressiveMedia-canvas {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+              transform: scale(1);
+    }
+    .progressiveMedia-image.lazyloaded {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition: visibility 0s linear 0s, opacity 1s 0s;-o-transition: visibility 0s linear 0s, opacity 1s 0s;transition: visibility 0s linear 0s, opacity 1s 0s; 
+    }
+  }
+}
+ 
