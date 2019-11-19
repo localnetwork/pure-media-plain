@@ -33,7 +33,6 @@ Download and extract the file and see index.html to see the demo.
       <div class="aspectRatioPlaceholder-fill"></div>
       <div class="progressiveMedia lazyload" data-width="1920" data-height="1080">
         <img class="progressiveMedia-thumbnail" src="small-image-path" alt="" />
-        <canvas class="progressiveMedia-canvas"></canvas>
         <img class="progressiveMedia-image lazyload" data-src="original-image-path" alt="" />
       </div>
     </div>
