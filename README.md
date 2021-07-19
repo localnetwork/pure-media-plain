@@ -52,7 +52,18 @@ Download and extract the file and see index.html to see the demo.
   <img class="progressiveMedia-image lazyload" data-src="original-image-path" alt="" />
   ```
 
-5. And finally set original image size (width, height) that you used in `data-src="path"` to `data-width` and `data-height` for class `.progressiveMedia`. For example:
+5. Using picture tag:
+
+  ```html
+  <picture>
+    <source media="(max-width:480px)" srcset="mobile-image-path">
+    <img class="progressiveMedia-thumbnail" src="small-image-path" alt="" />
+    <canvas class="progressiveMedia-canvas"></canvas>
+    <img class="progressiveMedia-image lazyload" data-src="original-image-path" alt="" />
+  </picture>
+  ```
+
+6. And finally set original image size (width, height) that you used in `data-src="path"` to `data-width` and `data-height` for class `.progressiveMedia`. For example:
 
   ```html
   <div class="progressiveMedia lazyload" data-width="1920" data-height="1080">
